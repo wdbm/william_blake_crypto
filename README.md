@@ -23,7 +23,7 @@ Under consideration are ways to use time-based one-time passcodes (TOTP) in plac
 pip install william_blake_crypto
 ```
 
-# example: generate key
+# generate key
 
 ```Python
 >>> import william_blake_crypto as wbc
@@ -31,7 +31,7 @@ pip install william_blake_crypto
 b'rojTAcN-Tjy6W43BUozbFIhIA2jq076KysjUj8l8N4E='
 ```
 
-# example: input key (for production)
+# input key (for production)
 
 ```Python
 >>> import william_blake_crypto as wbc
@@ -41,7 +41,7 @@ key:
 b'rojTAcN-Tjy6W43BUozbFIhIA2jq076KysjUj8l8N4E='
 ```
 
-# example: load key (for development)
+# load key (for development)
 
 ```Python
 >>> import william_blake_crypto as wbc
@@ -50,7 +50,7 @@ b'rojTAcN-Tjy6W43BUozbFIhIA2jq076KysjUj8l8N4E='
 b'rojTAcN-Tjy6W43BUozbFIhIA2jq076KysjUj8l8N4E='
 ```
 
-# example: encrypting and decrypting YAML objects
+# encrypting and decrypting YAML objects
 
 ```Python
 >>> import william_blake_crypto as wbc
@@ -63,7 +63,7 @@ b'gAAAAABbhGbVUVbbneKoz7wvV8aOF9K6r1hSNQvDexfAflIML33iyNa_Nf7Nm6g6syIXBkyANTHw3R
 {'passcode': 12345}
 ```
 
-# example: converting a YAML file to an encrypted YAML file and decrypting it
+# converting a YAML file to an encrypted YAML file and decrypting it
 
 ```Bash
 $ echo "{'passcode': 12345}" > test.yaml
@@ -88,7 +88,7 @@ b'gAAAAABbhGzog6kLduLbflVx49jUD6WmIuRw8h0V7X25LrW6LnKjxbLN0pE7jMMeY9qaeGysjLsz-X
 {'passcode': 12345}
 ```
 
-# example: converting an encrypted YAML file to a YAML file
+# converting an encrypted YAML file to a YAML file
 
 ```Python
 >>> import william_blake_crypto as wbc
