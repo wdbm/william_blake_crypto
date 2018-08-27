@@ -4,14 +4,14 @@
 
 This package can
 
-- convert a YAML object to an encrypted string object,
+- convert a YAML object to an encrypted string object and back,
 - convert a YAML file to an encrypted file and back,
 - decrypt an encrypted file to a YAML object,
 - and can generate, input and load a key for these purposes.
 
 This package should be used in addition to other security measures.
 
-Using this module, a key should be generated and saved securely. In production, a script using this package can request the key as a manual input and then can use the key to decrypt an encrypted file to a YAML object; for example, an encrypted configuration file. The package has other functionalities, as mentioned. In development, a key can be generated and saved to a file such as `~/.config/william_blake_crypto/key` which can be loaded by the package without the need for manual input, but this is not a secure approach so should be used only for development, not production.
+Using this module, a key should be generated and saved securely. In production, a script using this package can request the key as a manual input and then can use the key to decrypt an encrypted file to a YAML object; for example, an encrypted configuration file. In development, a key can be generated and saved to a file such as `~/.config/william_blake_crypto/key` which can be loaded by the package without the need for manual input, but this is not a secure approach so should be used only for development, not production.
 
 # future
 
@@ -58,10 +58,10 @@ b'rojTAcN-Tjy6W43BUozbFIhIA2jq076KysjUj8l8N4E='
 >>> wbc._key
 b'rojTAcN-Tjy6W43BUozbFIhIA2jq076KysjUj8l8N4E='
 >>> config = {"passcode": 12345}
->>> token = wbc.encrypt_yaml(content = config)
+>>> token = wbc.encrypt_yaml(content=config)
 >>> token
 b'gAAAAABbhGbVUVbbneKoz7wvV8aOF9K6r1hSNQvDexfAflIML33iyNa_Nf7Nm6g6syIXBkyANTHw3RlGMIsCgDligdts78a6VxrBaxbOIhGqSkzNtA5GDK4='
->>> wbc.decrypt_yaml(token = token)
+>>> wbc.decrypt_yaml(token=token)
 {'passcode': 12345}
 ```
 
