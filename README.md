@@ -55,8 +55,6 @@ b'rojTAcN-Tjy6W43BUozbFIhIA2jq076KysjUj8l8N4E='
 ```Python
 >>> import william_blake_crypto as wbc
 >>> wbc.load_key()
->>> wbc._key
-b'rojTAcN-Tjy6W43BUozbFIhIA2jq076KysjUj8l8N4E='
 >>> config = {"passcode": 12345}
 >>> token = wbc.encrypt_yaml(content=config)
 >>> token
