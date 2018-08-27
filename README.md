@@ -1,5 +1,7 @@
 # william_blake_crypto
 
+![](https://raw.githubusercontent.com/wdbm/william_blake_crypto/master/william_blake_crypto.png)
+
 This package can
 
 - convert a YAML object to an encrypted string object,
