@@ -76,7 +76,6 @@ $ echo "{'passcode': 12345}" > test.yaml
 ```
 
 ```Bash
-$ rm test.yaml
 $ cat test.cyaml 
 b'gAAAAABbhGzog6kLduLbflVx49jUD6WmIuRw8h0V7X25LrW6LnKjxbLN0pE7jMMeY9qaeGysjLsz-XA8EZ_LQVGslXhicpxLtt9K0CYFFYv2UZ3XEDt8oEI='
 ```
