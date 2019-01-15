@@ -9,13 +9,13 @@ This package can
 - decrypt an encrypted file to a YAML object,
 - and can generate, input and load a key for these purposes.
 
-This package should be used in addition to other security measures.
+This package should be used in addition to other security measures, such as running it on an operating system with an encrypted partition (e.g. ecryptfs, LUKS) and with SSH passcode access disabled.
 
-Using this module, a key should be generated and saved securely. In production, a script using this package can request the key as a manual input and then can use the key to decrypt an encrypted file to a YAML object; for example, an encrypted configuration file. In development, a key can be generated and saved to a file such as `~/.config/william_blake_crypto/key` which can be loaded by the package without the need for manual input, but this is not a secure approach so should be used only for development, not production.
+Using this module, a key should be generated and saved securely.
 
-# future
+In production, robust security is assumed to be required, so a script using this package can request the key as a *manual input* that is provided by the user when the script is launched and then the script can use this key, which exists solely in the volatile memory associated with the script, to decrypt an encrypted file to a YAML object; for example, an encrypted configuration file.
 
-Under consideration are ways to use time-based one-time passcodes (TOTP) in place of a static key, perhaps using [che_guevara_otp](https://github.com/wdbm/che_guevara_otp).
+In development, a key can be generated and saved to a file such as `~/.config/william_blake_crypto/key` which can be loaded by the package without the need for manual input, but this is not a secure approach so should be used only for development, not production.
 
 # setup
 
@@ -41,7 +41,11 @@ key:
 b'rojTAcN-Tjy6W43BUozbFIhIA2jq076KysjUj8l8N4E='
 ```
 
+The idea is that this key is stored securely (perhaps in a VeraCrypt volume file) and copy-pasted into the terminal in which the script is launched when the key is requested. This ensures that the key exists only in the volatile memory associated with the running script, and is not accessible as a plaintext file (which would be viewable by a cracker).
+
 # load key (for development)
+
+For development, generate a key (as described above) and save it to a file such as `~/.config/william_blake_crypto/key`, which is the default location for this key *which is intended for development use only* (though the path of this key can be specified as an argument for the function `load_key`.
 
 ```Python
 >>> import william_blake_crypto as wbc
@@ -100,3 +104,7 @@ b'gAAAAABbhGzog6kLduLbflVx49jUD6WmIuRw8h0V7X25LrW6LnKjxbLN0pE7jMMeY9qaeGysjLsz-X
 $ cat test2.yaml 
 {passcode: 12345}
 ```
+
+# future
+
+Under consideration are ways to use time-based one-time passcodes (TOTP) in place of a static key, perhaps using [che_guevara_otp](https://github.com/wdbm/che_guevara_otp).
