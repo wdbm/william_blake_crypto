@@ -31,6 +31,12 @@ pip install william_blake_crypto
 b'rojTAcN-Tjy6W43BUozbFIhIA2jq076KysjUj8l8N4E='
 ```
 
+So, for production, this key could be saved to a file such as `~/.config/william_blake_crypto/key`. The exact contents of the file in this example would be as follows:
+
+```
+rojTAcN-Tjy6W43BUozbFIhIA2jq076KysjUj8l8N4E=
+```
+
 # input key (for production)
 
 ```Python
