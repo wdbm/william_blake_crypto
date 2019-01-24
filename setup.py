@@ -7,7 +7,7 @@ import setuptools
 def main():
     setuptools.setup(
         name                 = "william_blake_crypto",
-        version              = "2019.01.15.1515",
+        version              = "2019.01.24.0405",
         description          = "cryptography library",
         long_description     = long_description(),
         url                  = "https://github.com/wdbm/william_blake_crypto",
@@ -16,6 +16,7 @@ def main():
         license              = "GPLv3",
         packages             = setuptools.find_packages(),
         install_requires     = [
+                               "cffi",
                                "cryptography",
                                "pyyaml",
                                "technicolor"
