@@ -103,7 +103,7 @@ def decrypt_yaml(key=None, token=None):
         log.error("key not set")
         return False
     f = Fernet(key)
-    content = yaml.load(f.decrypt(token))
+    content = yaml.load(f.decrypt(token), Loader=yaml.FullLoader)
     return content
 
 def yaml_to_encrypted_file(key=None, filepath=None, content=None):
@@ -122,7 +122,7 @@ def yaml_file_to_encrypted_file(key=None, filepath_yaml=None, filepath_encrypted
         return False
     else:
         with open(str(filepath_yaml), "r") as _file:
-            content = yaml.load(_file)
+            content = yaml.load(_file, Loader=yaml.FullLoader)
     yaml_to_encrypted_file(key=key, filepath=filepath_encrypted, content=content)
 
 def encrypted_file_to_yaml(key=None, filepath=None):
