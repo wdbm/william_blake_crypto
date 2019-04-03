@@ -9,7 +9,7 @@
 #                                                                              #
 # The program is a Python cryptography library.                                #
 #                                                                              #
-# copyright (C) 2018 William Breaden Madden                                    #
+# copyright (C) 2018 William Breaden Madden, Stephen Ogilvy                    #
 #                                                                              #
 # This software is released under the terms of the GNU General Public License  #
 # version 3 (GPLv3).                                                           #
