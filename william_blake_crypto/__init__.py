@@ -46,7 +46,7 @@ from cryptography.fernet import Fernet
 import technicolor
 
 name        = "william_blake_crypto"
-__version__ = "2019-01-24T0404Z"
+__version__ = "2019-04-03T0616Z"
 
 log = logging.getLogger(name)
 log.addHandler(technicolor.ColorisingStreamHandler())

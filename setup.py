@@ -7,7 +7,7 @@ import setuptools
 def main():
     setuptools.setup(
         name                 = "william_blake_crypto",
-        version              = "2019.01.24.0405",
+        version              = "2019-04-03T0617Z",
         description          = "cryptography library",
         long_description     = long_description(),
         url                  = "https://github.com/wdbm/william_blake_crypto",
